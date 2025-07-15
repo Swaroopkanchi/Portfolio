@@ -1,0 +1,248 @@
+/* General Styles */
+:root {
+    /* Define colors as CSS variables for easy maintenance */
+    --color-primary-bg: #98FB98; /* Mint Green */
+    --color-secondary-bg: #f7f3f1f5; /* White for cards/sections for contrast */
+    --color-accent: #fa8c68; /* Bright Coral */
+    --color-text-dark: #5C4033; /* Dark Brown */
+    --color-text-light: #F0F8FF; /* AliceBlue for text on dark backgrounds */
+    --color-hover-highlight: #FFD700; /* Sunny Yellow */
+    --color-shadow: rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--color-text-dark); /* Dark Brown text */
+  background: var(--color-primary-bg); /* Mint Green body background */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: var(--color-accent); /* Bright Coral Navbar */
+  box-shadow: 0 2px 5px var(--color-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-text-light); /* White/AliceBlue for logo on coral background */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--color-text-light); /* White/AliceBlue for links on coral background */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--color-hover-highlight); /* Sunny Yellow on hover */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: var(--color-secondary-bg); /* White hero section */
+}
+
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  border: 3px solid var(--color-accent); /* Coral border for the image */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: var(--color-text-dark); /* Dark Brown heading */
+}
+
+.hero h1 span { /* If you want to highlight part of the heading */
+    color: var(--color-accent); /* Bright Coral for highlights */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-text-dark); /* Dark Brown paragraph text */
+}
+
+/* Sections */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--color-accent); /* Bright Coral border for headings */
+  padding-left: 15px;
+  color: var(--color-text-dark); /* Dark Brown heading */
+}
+
+.about p, .skills ul, .experience-card, .contact-info, .contact-form {
+  background: var(--color-secondary-bg); /* White background for these cards */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  color: var(--color-text-dark); /* Ensure text within cards is dark brown */
+}
+
+.skills ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.experience-card ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--color-secondary-bg); /* White background for project cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 15px;
+  color: var(--color-text-dark); /* Dark Brown heading */
+}
+
+.project-card p {
+  margin: 0 15px;
+  font-size: 0.95rem;
+  color: var(--color-text-dark); /* Dark Brown text */
+}
+
+.project-card ul {
+  list-style: disc;
+  margin: 10px 30px 20px;
+  color: var(--color-text-dark); /* Dark Brown text */
+}
+
+/* Contact Section */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-accent); /* Bright Coral border for inputs */
+  border-radius: 5px;
+  color: var(--color-text-dark); /* Dark Brown text in inputs */
+  background-color: var(--color-secondary-bg); /* White input background */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-text-dark); /* Dark Brown placeholder text */
+    opacity: 0.7; /* Make placeholder slightly lighter */
+}
+
+
+.contact-form button {
+  background: var(--color-accent); /* Bright Coral button */
+  color: var(--color-text-light); /* White text on button */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--color-hover-highlight); /* Sunny Yellow on button hover */
+  color: var(--color-text-dark); /* Dark text on yellow hover */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--color-accent); /* Bright Coral Footer */
+  color: var(--color-text-light); /* White text on footer */
+  font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--color-hover-highlight); /* Sunny Yellow for links in footer */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-text-light); /* White on hover in footer */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+}
